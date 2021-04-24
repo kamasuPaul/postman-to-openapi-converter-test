@@ -1,0 +1,91 @@
+openapi: 3.0.0
+info:
+  title: Auth
+  version: 1.0.0
+servers:
+  - url: undefined://{{BASE_URL}}
+  - url: https://apisandbox.yowasteapp.com
+paths:
+  /users/login:
+    post:
+      tags:
+        - General
+      summary: Login
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v2/users/login:
+    post:
+      tags:
+        - General
+      summary: Login Copy
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v2/users/register:
+    post:
+      tags:
+        - General
+      summary: Register a new user
+      requestBody:
+        content: {}
+      parameters:
+        - name: key
+          in: header
+          schema:
+            type: string
+          example: wNTjWFb8HsMx4nJGG4wuiv3ncnN5ovLrLqIPcJfA
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v2/auth/request-otp:
+    post:
+      tags:
+        - General
+      summary: OTP
+      requestBody:
+        content: {}
+      parameters:
+        - name: key
+          in: header
+          schema:
+            type: string
+          example: wNTjWFb8HsMx4nJGG4wuiv3ncnN5ovLrLqIPcJfA
+        - name: phone
+          in: query
+          schema:
+            type: integer
+          example: '0750883001'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v2/auth/verify-otp:
+    post:
+      tags:
+        - General
+      summary: OTP verify
+      requestBody:
+        content: {}
+      parameters:
+        - name: key
+          in: header
+          schema:
+            type: string
+          example: wNTjWFb8HsMx4nJGG4wuiv3ncnN5ovLrLqIPcJfA
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
