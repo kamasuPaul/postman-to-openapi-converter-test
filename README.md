@@ -1,0 +1,1 @@
+A sample project to test converting postman collection files to swagger or open api specification file.
